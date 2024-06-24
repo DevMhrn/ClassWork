@@ -1,6 +1,10 @@
-import {useRef, useState } from 'react';
+ import {useRef, useState } from 'react';
+// import AddtoCart from '../AddtoCart/AddtoCart';
+import ReduxAddToCart from '../ReduxAddToCart/ReduxAddToCart';
 
-function ProductCard({title, price, k }) {
+
+
+function ProductCard({title, price, k,product, cart, increaseQuantity, decreaseQuantity}) {
     let spanRef = useRef(null); // Initialize ref for span
     let pRef = useRef(null); // Initialize ref for p
     let iRef = useRef(0); // Initialize ref for input
@@ -49,9 +53,15 @@ function ProductCard({title, price, k }) {
                 onChange={showInput}
                 onKeyPress={appendInput} 
             />
+            {/* <AddtoCart product={product}  /> */}
+            <ReduxAddToCart product={product}/>
+         
+            
+
             
             <div ref={iRef}  className='append'> {inputValue}</div>
             <p ref={pRef} style={{ display: 'none' }}>This is a product card</p> 
+            
         </div>
     );
 

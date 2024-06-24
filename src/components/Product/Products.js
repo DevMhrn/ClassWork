@@ -2,7 +2,9 @@ import React from "react";
 import WindowSize  from "./WindowSize";
 import ProductCard from "../ProductCard/ProductCard"; 
 import { useState, useEffect } from "react"; 
-function Products() {
+import AddtoCart from "../AddtoCart/AddtoCart";
+
+function Products({cart, increaseQuantity, decreaseQuantity}) {
   // const products = [
   //   {
   //     id: 1,
@@ -70,7 +72,9 @@ function Products() {
       {
         products.map(function(product){
           // return <ProductCard title={product.title} price={product.price} k = {product.id} />
-          return <ProductCard title={product.title} price={product.price} k = {product.id} currency={product.currency}  />
+          return <ProductCard title={product.title} price={product.price} k = {product.id} currency={product.currency}  
+          product={product} cart={cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity}
+          />
         })
 
       }
