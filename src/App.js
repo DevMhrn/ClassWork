@@ -4,6 +4,8 @@ import Products from './components/Product/Products';
 import {a, b} from './components/Product/Products';
 import {useState} from 'react';
 import CartContext from './context/CartContext';
+import Cart from './components/Cart/Cart';
+
 
 
 
@@ -43,6 +45,7 @@ function App() {
 
       
       <Products cart= {cart} increaseQuantity={increaseQuantity} decreaseQuantity={decreaseQuantity} />
+      <Cart/>
       
     </div>
   );
