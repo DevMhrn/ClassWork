@@ -2,16 +2,20 @@ import Products from "../Product/Products";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect, useRef } from "react";
+import {addToCart, removeFromCart} from "../../store";
 function ReduxAddToCart({product}) {
     let dispatch = useDispatch();
     function IncProduct(){
-        dispatch({type: 'ADD_TO_CART', payload: product});
+        // dispatch({type: 'ADD_TO_CART', payload: product});
+        dispatch(addToCart(product));
+
         
 
 
     }
     function DecProduct(){
-        dispatch({type: 'REMOVE_FROM_CART', payload: product});
+        // dispatch({type: 'REMOVE_FROM_CART', payload: product});
+        dispatch(removeFromCart(product));
 
     }
     let cart = useSelector(state => state.items);
