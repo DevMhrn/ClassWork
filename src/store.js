@@ -21,7 +21,7 @@ function Redux(state={items:{}}, action){
         <div></div>
     )
     switch(action.type){
-        case "ADD_TO_CART":{
+        case ADD_TO_CART:{
            
            const product = action.payload;
       if (state.items[product.id]) {
@@ -50,7 +50,7 @@ function Redux(state={items:{}}, action){
 
 
         }
-        case "REMOVE_FROM_CART":{
+        case REMOVE_FROM_CART:{
             const product = action.payload;
             if(state.items[product.id].quantity >1){
                 return{
