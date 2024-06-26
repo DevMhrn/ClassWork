@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import AddtoCart from "../AddtoCart/AddtoCart";
 
 function Products({cart, increaseQuantity, decreaseQuantity}) {
-  // const products = [
+  // const products = [ffvf
   //   {
   //     id: 1,
   //     title: "Apple iPhone 14",
