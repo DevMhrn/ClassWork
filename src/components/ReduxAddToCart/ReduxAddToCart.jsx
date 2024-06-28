@@ -16,7 +16,7 @@ function ReduxAddToCart({ product }) {
     const cart = useSelector(state => state.items || {}); // Ensure cart is always an object
 
     const quantity = useSelector(state => {
-        const items = state.items || {}; // Ensure items is always an object
+        const items = state.cart.items || {}; 
         return items[product.id]?.quantity || 0;
     });
 

@@ -17,9 +17,7 @@ export function removeFromCart(product){
     }
 }
 function Redux(state={items:{}}, action){
-    return(
-        <div></div>
-    )
+    
     switch(action.type){
         case ADD_TO_CART:{
            

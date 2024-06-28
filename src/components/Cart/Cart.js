@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function Cart() {
-    const cartElements = useSelector(state => state.items) || {}; // Ensure cartElements is always an object
+    const cartElements = useSelector(state => state.cart.items) || {}; 
 
     return (
         <div>
@@ -19,5 +19,6 @@ function Cart() {
         </div>
     );
 }
+
 
 export default Cart;

@@ -37,7 +37,9 @@ function App() {
   }
   console.log(a, b);
   return (
+    <CartContext.Provider value={{cart, setCart}}>
     <div className="App">
+    
 
       
       
@@ -48,6 +50,7 @@ function App() {
       <Cart/>
       
     </div>
+    </CartContext.Provider>
   );
 }
 
