@@ -8,6 +8,7 @@ export function loadCategories() {
             console.log(res);
             dispatch({ type: "LOAD_CATEGORIES_DONE", payload: res });
         })
+        
     }
 }
 
